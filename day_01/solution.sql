@@ -19,7 +19,7 @@ INSERT INTO products (product_name, category, price, stock_quantity, rating) VAL
 
 
 -- Find all products that have fewer than 10 items in the stock
-SELECT product_name, stock_quantity FROM products
+SELECT product_name FROM products
 WHERE stock_quantity < 10;
 
 -- Find products in the 'Electronics' category that cost more than 100 dollars

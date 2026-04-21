@@ -1,5 +1,14 @@
-DROP users IF EXISTS;
-DROP orders IF EXISTS;
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS users;
+
+
+-- users table
+CREATE TABLE users(
+    userID SERIAL PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    join_date DATE
+);
 
 -- orders table
 CREATE TABLE orders(
@@ -10,13 +19,6 @@ CREATE TABLE orders(
     amount DECIMAL(10, 2)
 );
 
--- users table
-CREATE TABLE users(
-    userID SERIAL PRIMARY KEY,
-    username VARCHAR(50),
-    email VARCHAR(100),
-    join_date DATE
-);
 
 -- data insertion
 INSERT INTO users(username, email, join_date) VALUES
