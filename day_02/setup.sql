@@ -12,7 +12,7 @@ CREATE TABLE users(
 
 -- orders table
 CREATE TABLE orders(
-    orderID SERIAL PRIMARY KEY,
+    orderID SERIAL PRIMARY KEY, 
     userID INT REFERENCES users(userID),
     product_name VARCHAR(200),
     order_date DATE,
